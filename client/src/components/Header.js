@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import StripeWrapper from './StripeWrapper';
 
 class Header extends Component {
 	renderLoginButton() {
@@ -14,11 +15,17 @@ class Header extends Component {
 					</li>
 				);
 			default:
-				return (
-					<li>
+				return [
+					<li key="stripe-wrapper">
+						<StripeWrapper />
+					</li>,
+					<li key="credits" style={{ margin: '0 10px' }}>
+						Credits: {this.props.auth.credits}
+					</li>,
+					<li key="logout">
 						<a href="/api/logout">Logout</a>
 					</li>
-				);
+				];
 		}
 	}
 

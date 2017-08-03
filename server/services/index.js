@@ -1,1 +1,2 @@
 require('./passportService');
+require('./Mailer');

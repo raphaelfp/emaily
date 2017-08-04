@@ -1,1 +1,2 @@
+require('./keepAwake');
 require('./passportService');

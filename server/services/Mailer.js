@@ -39,18 +39,15 @@ module.exports = class Mailer extends helper.Mail {
 		this.addPersonalization(personalize);
 	}
 
-	async send() {
+	send() {
 		const request = this.sgApi.emptyRequest({
 			method: 'POST',
 			path: '/v3/mail/send',
 			bocy: this.toJSON()
 		});
-
-		try {
-			const response = await this.sgApi.API(request);
+		this.sgApi.API(request, (error, response) => {
+			if (error) console.log('Error response received');
 			return response;
-		} catch (err) {
-			console.log(err);
-		}
+		});
 	}
 };

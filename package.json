@@ -29,5 +29,8 @@
 		"passport-google-oauth20": "^1.0.0",
 		"sendgrid": "^5.2.0",
 		"stripe": "^4.23.1"
+	},
+	"devDependencies": {
+		"cors": "^2.8.4"
 	}
 }

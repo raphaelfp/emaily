@@ -46,7 +46,7 @@ module.exports = class Mailer extends helper.Mail {
 			bocy: this.toJSON()
 		});
 		this.sgApi.API(request, (error, response) => {
-			if (error) console.log('Error response received');
+			if (error) console.log(error);
 			return response;
 		});
 	}

@@ -22,12 +22,7 @@ class SurveyFieldInput extends Component {
 	}
 
 	render() {
-		const {
-			input,
-			type,
-			label,
-			meta: { error, touched, submitFailed }
-		} = this.props;
+		const { input, type, label, meta: { error, submitFailed } } = this.props;
 		return (
 			<div className="input-field">
 				<input

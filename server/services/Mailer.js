@@ -10,7 +10,7 @@ module.exports = class Mailer extends helper.Mail {
 		this.sgApi = sendgrid(keys.sendGridKey);
 		this.from_email = new helper.Email('no-reply@raphaelfp.com');
 		this.subject = subject;
-		this.boby = new helper.Content('text/html', content);
+		this.body = new helper.Content('text/html', content);
 		this.recipients = this.formatAdresses(recipients);
 
 		this.addContent(this.body);
@@ -46,11 +46,7 @@ module.exports = class Mailer extends helper.Mail {
 			body: this.toJSON()
 		});
 
-		try {
-			const response = await this.sgApi.API(request);
-			return response;
-		} catch (err) {
-			console.log(err);
-		}
+		const response = await this.sgApi.API(request);
+		return response;
 	}
 };

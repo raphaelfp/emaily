@@ -32,16 +32,19 @@ class Header extends Component {
 	render() {
 		return (
 			<nav>
-				<div className="nav-wrapper">
-					<Link
-						className="left brand-logo"
-						to={this.props.auth ? '/surveys' : '/'}
-					>
-						Emaily
-					</Link>
-					<ul className="right">
-						{this.renderLoginButton()}
-					</ul>
+				<div className="container">
+					<div className="nav-wrapper">
+						<Link
+							className="left brand-logo"
+							style={{ left: 0 }}
+							to={this.props.auth ? '/surveys' : '/'}
+						>
+							Emaily
+						</Link>
+						<ul className="right">
+							{this.renderLoginButton()}
+						</ul>
+					</div>
 				</div>
 			</nav>
 		);

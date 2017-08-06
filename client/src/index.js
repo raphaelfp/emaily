@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './components/App';
 import reducers from './reducers';
 
-import axios from 'axios';
-window.axios = axios;
-
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+
+injectTapEventPlugin();
 
 ReactDOM.render(
 	<Provider store={store}>

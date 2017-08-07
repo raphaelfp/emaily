@@ -11,8 +11,9 @@
 		"start": "node index.js",
 		"server": "nodemon index.js",
 		"client": "npm run start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+		"dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+		"webhook": "lt -p 5000 -s cxtuhr6rcgn39s638wz2wulc"
 	},
 	"author": "raphaelfp",
 	"license": "ISC",
@@ -24,6 +25,7 @@
 		"cors": "^2.8.4",
 		"express": "^4.15.3",
 		"heroku-ssl-redirect": "0.0.4",
+		"localtunnel": "^1.8.3",
 		"mongoose": "^4.11.5",
 		"nodemon": "^1.11.0",
 		"passport": "^0.3.2",

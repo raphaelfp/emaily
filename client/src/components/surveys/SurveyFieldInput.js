@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 
 class SurveyFieldInput extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			active: false
-		};
-	}
+	state = { active: false };
 
 	handleFocus() {
 		this.setState({
@@ -22,7 +16,14 @@ class SurveyFieldInput extends Component {
 	}
 
 	render() {
-		const { input, type, label, meta: { error, submitFailed } } = this.props;
+		const {
+			input,
+			type,
+			label,
+			reviewForm,
+			readOnly,
+			meta: { error, submitFailed }
+		} = this.props;
 		return (
 			<div className="input-field">
 				<input
@@ -31,10 +32,13 @@ class SurveyFieldInput extends Component {
 					onFocus={this.handleFocus.bind(this)}
 					type={type}
 					className={this.inputClassName()}
+					readOnly={readOnly}
 				/>
 				<label
 					className={
-						this.state.active || (submitFailed && error) ? 'active' : ''
+						reviewForm || this.state.active || (submitFailed && error)
+							? 'active'
+							: ''
 					}
 					htmlFor={input.name}
 					data-error={error}

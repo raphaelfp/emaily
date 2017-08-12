@@ -18,8 +18,7 @@ I've done two courses at [Udemy](https://www.udemy.com), [Modern React with Redu
 
 ## Important Links
 
-* [Heroku endpoint (server)](https://emaily-server.herokuapp.com)
-* Live app SOON
+* [Demo](https://emaily-server.herokuapp.com)
 * [Github repository](https://github.com/raphaelfp/emaily-server)
 * [Link to the course](https://www.udemy.com/node-with-react-fullstack-web-development)
 

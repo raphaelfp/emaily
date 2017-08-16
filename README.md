@@ -48,7 +48,7 @@ Build a large feedback-collection app. This mega app will include the full gamut
 * Learn to effectively create and send emails from a backend server
 * Accept and process credit card payments from users
 
-### Getting Started
+## Getting Started
 
 ```
 > git clone https://github.com/raphaelfp/emaily.git

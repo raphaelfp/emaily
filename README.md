@@ -1,4 +1,4 @@
-# Emaily-Server
+# Emaily
 
 This is my attempt to code along with Udemy - [Node with React: Fullstack Web Development](https://www.udemy.com/node-with-react-fullstack-web-development).
 
@@ -6,7 +6,7 @@ The purpose of this course is to create a feedback-collection app using NodeJS, 
 
 ## Who am I?
 
-My name is Raphael, I study Computer Engineering at Pontifícia Universidade Católica de Minas Gerais and I'm a Software Developer Intern at DTI Technologies at the moment.
+My name is Raphael, I'm a Computer Engineering student at Pontifícia Universidade Católica de Minas Gerais and I'm a Software Developer Intern at DTI Technologies at the moment.
 
 ## Why did I created this repo?
 
@@ -47,3 +47,12 @@ Build a large feedback-collection app. This mega app will include the full gamut
 * Make an app with Google OAuth authentication
 * Learn to effectively create and send emails from a backend server
 * Accept and process credit card payments from users
+
+### Getting Started
+
+```
+> git clone https://github.com/raphaelfp/emaily.git
+> cd emaily
+> npm install
+> npm run dev
+```
